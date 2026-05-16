@@ -7,12 +7,14 @@ export default function Error(props) {
         console.log(error)
     }, [error])
     return (
-        <div>
-            <h2>Something went wrong :(</h2>
-            <button onClick={reset}>Reset</button>
-            <Link href={'/'}>
-                <button>Home</button>
-            </Link>
+        <div className="page-container">
+            <h3>Something went wrong :(</h3>
+            <div>
+                <button onClick={reset}>Reset</button>
+                <Link href={'/'}>
+                    <button>Home</button>
+                </Link>
+            </div>
         </div>
     )
 }

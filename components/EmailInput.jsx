@@ -1,8 +1,16 @@
 'use client'
-export default function EmailInput(){
-    return(
+
+import { useState } from "react"
+
+export default function EmailInput() {
+    const [email, setEmail] = useState('')
+
+
+    return (
         <div className="sign-up">
-            <input placeholder="Email Address..." />
+            <input value={email} placeholder="Email Address..." onChange={(e) => {
+                setEmail(e.target.value)
+            }} />
             <button className="button-card">Sign Up</button>
         </div>
     )
