@@ -9,7 +9,7 @@ export default function Products(props) {
     const [portalImage, setPortalImage] = useState(null);
     const { handleIncrementProduct, cart } = useProducts();
 
-    console.log(cart)
+    // console.log(cart)
 
     // const stickerDescriptions = {
     //     CSS_HTML_Javascript: "Core web technologies for structure, styling",

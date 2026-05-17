@@ -43,7 +43,7 @@ export default function CartPage() {
       const currProdPrice = cartItem.prices[0]?.unit_amount
       const prodQuant = cartItem.quantity
       const total = acc + (parseInt(currProdPrice)*parseInt(prodQuant)) / 100
-      return total
+      return String(total).slice(0,6)
    }, 0)
 
 

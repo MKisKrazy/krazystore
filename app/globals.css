@@ -478,6 +478,14 @@ footer .links-container>div {
   .socials {
     grid-template-columns: span 2 / span 2;
   }
+
+  .portal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vh;
+    
+  }
 }
 
 @media (min-width:1024px) {
