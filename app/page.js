@@ -1,6 +1,6 @@
 import ImageBanner from "@/components/ImageBanner";
 import Products from "@/components/Products";
-import '../../../envConfig.js'
+import '../envConfig'
 import { loadEnvConfig } from "@next/env"
 
 
