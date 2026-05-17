@@ -38,6 +38,14 @@ export default function CartPage() {
       }
    }
 
+   const total_amount = Object.keys(cart).reduce((acc, curr, currIndex) => {
+      const cartItem= cart[curr]
+      const currProdPrice = cartItem.prices[0]?.unit_amount
+      const prodQuant = cartItem.quantity
+      const total = acc + (parseInt(currProdPrice)*parseInt(prodQuant)) / 100
+      return total
+   }, 0)
+
 
 
    return (
@@ -57,6 +65,8 @@ export default function CartPage() {
                   itemData.name.replaceAll(' Sticker.png', '').replaceAll(' ', '_')
 
                const imgUrl = 'low_res/' + imgName + '.jpeg'
+
+
                return (
                   <div key={itemIndex} className="cart-item">
                      <img src={imgUrl} alt={imgName + '-img'} />
@@ -81,6 +91,9 @@ export default function CartPage() {
                   </div>
                )
             })}
+         </div>
+         <div className="total-checkout">
+            <h4 className="text-medium">Total: ${total_amount}</h4>
          </div>
          <div className="checkout-container">
             <Link href={'/'}>

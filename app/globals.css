@@ -270,7 +270,12 @@ main,
   align-items: center;
 }
 
+.total-checkout{
+  
+  align-items: center;
+  justify-items: center;
 
+}
 
 /* footer styles */
 
