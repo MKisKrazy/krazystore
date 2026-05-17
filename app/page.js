@@ -2,6 +2,8 @@ import ImageBanner from "@/components/ImageBanner";
 import Products from "@/components/Products";
 import { getProducts } from "../lib/prod.js"
 
+const dynamic = 'force-dynamic'
+
 // export async function getProducts() {
 //   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 //   const response = await fetch(`${baseURL}/api/products`)
