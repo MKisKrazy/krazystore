@@ -1,15 +1,13 @@
 import ImageBanner from "@/components/ImageBanner";
 import Products from "@/components/Products";
-import '../envConfig'
-import { loadEnvConfig } from "@next/env"
+import { getProducts } from "../lib/prod.js"
 
-
-export async function getProducts() {
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL
-  const response = await fetch(`${baseURL}/api/products`)
-  const products = await response.json()
-  return products
-}
+// export async function getProducts() {
+//   const baseURL = process.env.NEXT_PUBLIC_BASE_URL
+//   const response = await fetch(`${baseURL}/api/products`)
+//   const products = await response.json()
+//   return products
+// }
 
 export default async function Home(props) {
 
@@ -29,7 +27,7 @@ export default async function Home(props) {
     <>
       <ImageBanner />
       <section>
-        <Products planner={planner} stickers={stickers}   />
+        <Products planner={planner} stickers={stickers} />
       </section>
     </>
   );
